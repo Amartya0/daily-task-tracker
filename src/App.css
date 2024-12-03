@@ -1,31 +1,36 @@
+/* General Body Styling */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  background-color: #e6f7ff; /* Soft blue background */
   margin: 0;
   padding: 0;
 }
 
+/* Center Application */
 .App {
   text-align: center;
   padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-h1 {
-  color: #333;
-}
-
+/* Task Input Section */
 .task-input {
   margin: 20px auto;
   display: flex;
   justify-content: center;
+  gap: 10px;
 }
 
 .task-input input {
   padding: 10px;
   width: 300px;
   border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-right: 10px;
+  border-radius: 12px; /* Increased border radius for rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .task-input button {
@@ -33,38 +38,77 @@ h1 {
   background-color: #007bff;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 12px; /* Rounded button */
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.task-input button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Task List */
 .task-list {
   margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
 }
 
+/* Task Items */
 .task-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
   margin: 10px auto;
-  padding: 10px 20px;
-  border-radius: 4px;
-  width: 400px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  border-radius: 12px; /* Rounded corners for task items */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.task-item.completed span {
-  text-decoration: line-through;
-  color: #999;
+
+/* Align checkbox and label using flex */
+.task-input label {
+  display: flex; /* Use flex to align the items */
+  align-items: center; /* Align vertically */
+  gap: 5px; /* Add space between checkbox and label text */
+  margin-left: 10px; /* Add space before the label */
 }
 
-.task-actions .icon-check {
+/* Reminder Checkbox (other wise this checkbox take width equal to the other fields of task input)*/
+.task-input .reminder-checkbox {
+  display: inline-block; /* Keep it inline */
+  width: auto; /* Ensure minimal space */
+  margin: 0; /* Remove any unnecessary margin */
+}
+
+
+
+.task-item.completed {
+  background-color: #d4edda; /* Light green for completed tasks */
+  color: #155724;
+}
+
+.task-item.overdue {
+  background-color: #f8d7da; /* Light red for overdue tasks */
+  color: #721c24;
+}
+
+.task-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.task-actions button:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.icon-check {
   color: green;
-  cursor: pointer;
-  margin-right: 10px;
 }
 
-.task-actions .icon-delete {
+.icon-delete {
   color: red;
-  cursor: pointer;
 }
