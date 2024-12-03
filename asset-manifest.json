@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/daily-task-tracker/static/css/main.14049d55.css",
+    "main.js": "/daily-task-tracker/static/js/main.afed9d69.js",
+    "index.html": "/daily-task-tracker/index.html",
+    "main.14049d55.css.map": "/daily-task-tracker/static/css/main.14049d55.css.map",
+    "main.afed9d69.js.map": "/daily-task-tracker/static/js/main.afed9d69.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.14049d55.css",
+    "static/js/main.afed9d69.js"
+  ]
+}
